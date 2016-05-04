@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroller"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="false">
+
+    <!-- Linear layout principal-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:weightSum="1"
+        tools:context=".UserInterface.InfoEmpresaActivity"
+        android:background="@color/card_background">
+
+        <ImageView
+            android:id="@+id/infoempresaImagen"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+
+            android:src="@drawable/user" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/nombreEmpresa"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_above="@+id/linearLayout"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/infoempresaImagen"
+                android:layout_below="@+id/infoempresaImagen"
+                android:gravity="center_vertical|center_horizontal"
+                android:password="false"
+                android:text="Nombre de la empresa va aquí"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="18dp"
+                android:textStyle="normal|bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="false"
+            android:layout_below="@+id/infoempresaImagen"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="343dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgCasa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/home" />
+
+                <TextView
+                    android:id="@+id/direccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left|right"
+                    android:autoLink="map"
+                    android:gravity="center|start"
+                    android:lines="5"
+                    android:text="direccion"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="343dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/cphone" />
+
+                <TextView
+                    android:id="@+id/telefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left|right"
+                    android:autoLink="phone"
+                    android:gravity="center|start"
+                    android:phoneNumber="true"
+                    android:text="telefono"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="343dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/email" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|right"
+                    android:autoLink="email"
+                    android:gravity="left|center"
+                    android:lines="2"
+                    android:text="email"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:maxLines="2"
+                    android:maxWidth="115dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="343dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/globe" />
+
+                <TextView
+                    android:id="@+id/webpage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left|right"
+                    android:autoLink="web"
+                    android:gravity="center|start"
+                    android:text="web"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="343dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/servicios" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_servicios"
+                            android:layout_width="match_parent"
+                            android:layout_height="34dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="left|center_vertical|right"
+                            android:background="@color/Coparmex"
+                            android:gravity="center|start"
+                            android:text="Servicios"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/plain_white" />
+                    </LinearLayout>
+
+                    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                        android:id="@+id/exp_servicios"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Coparmex"
+                        app:ael_duration="300"
+                        app:ael_expanded="false"
+                        app:ael_interpolator="bounce"
+                        app:ael_orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="a\n" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="b\n" />
+                        </LinearLayout>
+
+
+<!--
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/serviciosope"/>
+                            -->
+                    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="343dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ofertas" />
+
+                <TextView
+                    android:id="@+id/tv_ofertas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left|right"
+                    android:autoLink="web"
+                    android:background="@color/Coparmex"
+                    android:gravity="center|start"
+                    android:text="Ofertas"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/plain_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="343dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/marker" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_sucursales"
+                            android:layout_width="match_parent"
+                            android:layout_height="34dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="left|center_vertical|right"
+                            android:background="@color/Coparmex"
+                            android:gravity="center|start"
+                            android:text="Sucursales"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/plain_white" />
+                    </LinearLayout>
+
+                    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                        android:id="@+id/exp_sucursales"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@color/Coparmex"
+                        app:ael_duration="300"
+                        app:ael_expanded="false"
+                        app:ael_interpolator="bounce"
+                        app:ael_orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="a\n" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="b\n" />
+                        </LinearLayout>
+                        <fragment
+                            class="com.android.coparmextab.UserInterface.ScrollViewCompatibleMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/mapita"/>
+                    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

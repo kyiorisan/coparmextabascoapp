@@ -1,0 +1,85 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserInterface.RegistroFragment">
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         >
+
+    </ScrollView>
+
+    <LinearLayout
+        style="@style/LoginFormContainer"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_height="300dp">
+
+        <ImageView
+            android:layout_width="334dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView9"
+            android:src="@drawable/index_header"
+            android:layout_weight="1.99" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="Correo"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:imeActionId="@+id/login"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal" >
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/add_user_button"
+            android:layout_width="179dp"
+            android:layout_height="29dp"
+            android:text="Regístrate"
+            android:textColor="#ffff"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/selector"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/FB_Login"
+            android:layout_width="179dp"
+            android:layout_height="29dp"
+            android:text="{faw-facebook-square} Regístrate con Facebook"
+            android:textColor="#ffff"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/register_buton_selector"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+</FrameLayout>

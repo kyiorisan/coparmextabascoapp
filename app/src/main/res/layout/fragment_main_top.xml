@@ -1,0 +1,77 @@
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/section_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:weightSum="1">
+
+            <EditText
+                android:id="@+id/textoBusqueda"
+                android:layout_width="244dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Introduce tu búsqueda..."
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.95"
+                android:layout_marginLeft="20dp">
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/botonBuscar"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="68dp"
+                android:layout_height="34dp"
+                android:text="{faw-search}"
+                android:background="@drawable/selector"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:onClick="cambioVista" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/radio1"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <RadioButton
+                android:id="@+id/radio0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:paddingRight="15dp"
+                android:text="Ofertas" />
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Empresas" />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Productos" />
+        </RadioGroup>
+    </LinearLayout>

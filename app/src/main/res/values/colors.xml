@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Azules báscios de la app -->
+    <color name="holo_blue">#33b5e5</color>
+    <color name="Coparmex">#4388cc</color>
+    <color name="Drawer_Icons">#40a0ff</color>
+    <color name="btnActivado">#014cc2</color>
+    <color name="btnFBRegistro">#3b5999</color>
+    <color name="actionModeGrey">#d4d4d4</color>
+
+
+
+    <!-- Colores de calificación de empresas -->
+    <color name="malrate">#e74c3c</color>
+    <color name="buenrate">#2ecc71</color>
+
+    <!-- Colores usados en los CardView -->
+    <color name="card_background">#fffafa</color>
+    <color name="plain_white">#ffffff</color>
+    <color name="card_onTouch">#b0e0e6</color>
+
+</resources>

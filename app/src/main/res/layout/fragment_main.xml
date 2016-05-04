@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".UserInterface.MainActivity$PlaceholderFragment" >
+
+
+    <FrameLayout
+        android:id="@+id/top_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.android.coparmextab.MainTopFragment" />
+
+
+      <FrameLayout
+        android:id="@+id/bottom_fragment"
+        android:name="com.android.coparmextab.MainScreenBotFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.58" />
+
+</LinearLayout>

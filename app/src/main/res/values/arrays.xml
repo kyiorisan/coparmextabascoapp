@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="actividades">
+        <item>Coparmex Tabasco</item>
+        <item>Empresas de 10</item>
+        <item>Términos y Condiciones</item>
+        <item>Socios Coparmex</item>
+        <item>Registrate</item>
+        <item>Acerca de</item>
+        <item>Contáctanos</item>
+    </string-array>
+
+    <integer-array name="atds_icons">
+        <item>@drawable/home</item>
+        <item>@drawable/emp10m</item>
+        <item>@drawable/terminos</item>
+        <item>@drawable/socios</item>
+        <item>@drawable/registro</item>
+        <item>@drawable/info</item>
+        <item>@drawable/contacto</item>
+    </integer-array>
+</resources>

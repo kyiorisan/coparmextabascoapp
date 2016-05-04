@@ -1,0 +1,129 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserInterface.ContactoFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top|left"
+        android:weightSum="1">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:hint="Nombre"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="30dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/editText2"
+            android:hint="Correo"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="30dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText3"
+            android:hint="Mensaje"
+            android:layout_weight="0.22"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="30dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:weightSum="1"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView6"
+                android:src="@drawable/home"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:layout_width="211dp"
+                android:layout_height="wrap_content"
+                android:text="Carretera Bosque de Saloya - El Cedro S/N, 3er Piso, R/A Emiliano Zapata, 86280 Villahermosa, Tab."
+                android:id="@+id/textView"
+                android:textColor="@color/Drawer_Icons"
+                android:layout_weight="0.35"
+                android:paddingLeft="15dp"
+                android:autoLink="map" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:weightSum="1"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView8"
+                android:src="@drawable/cphone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="(993)-268-0267"
+                android:id="@+id/textView4"
+                android:textColor="@color/Drawer_Icons"
+                android:gravity="center_vertical|center"
+                android:autoLink="phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="(993)-268-0268"
+                android:id="@+id/textView5"
+                android:textColor="@color/Drawer_Icons"
+                android:layout_weight="0.24"
+                android:gravity="center_vertical|center"
+                android:autoLink="phone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:weightSum="1"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView7"
+                android:src="@drawable/message"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:layout_width="211dp"
+                android:layout_height="match_parent"
+                android:text="contacto@coparmextabasco.org.mx"
+                android:id="@+id/textView3"
+                android:textColor="@color/Drawer_Icons"
+                android:layout_weight="0.35"
+                android:gravity="center_vertical|center"
+                android:autoLink="email" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

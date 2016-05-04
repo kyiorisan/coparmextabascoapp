@@ -1,0 +1,42 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="android:Theme.DeviceDefault.Light">
+        <item name="android:textColorPrimary">@color/bright_foreground_material_light</item>
+        <item name="android:textColorPrimaryInverse">@color/abc_primary_text_disable_only_material_dark</item>
+        <item name="android:textColorSecondary">@color/abc_input_method_navigation_guard</item>
+        <item name="android:textColorSecondaryInverse">@color/card_onTouch</item>
+        <item name="android:colorBackground">@android:color/background_light</item>
+        <item name="android:colorForeground">@color/material_deep_teal_500</item>
+        <item name="android:actionModeBackground">@color/actionModeGrey</item>
+        <item name="android:actionBarStyle">@style/Coparmex.ActionBar</item>
+    </style>
+
+    <style name="Coparmex.ActionBar" parent="android:Widget.ActionBar">
+        <item name="android:background">@color/Coparmex</item>
+        <item name="android:titleTextStyle">@style/Coparmex.ActionBar.TitleTextStyle</item>
+        <item name="android:icon">@android:color/transparent</item>
+        <item name="android:displayOptions">showTitle|useLogo</item>
+
+    </style>
+
+    <style name="Coparmex.ActionBar.TitleTextStyle" parent="android:Widget.TextView">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/plain_white</item>
+    </style>
+
+
+</resources>

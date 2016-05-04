@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    tools:context = ".UserInterface.Empresas10Fragment"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aqui va la explicación de las empresas de 10"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="100dp"
+        android:textSize="25dp"
+        android:gravity="center_horizontal" />
+    
+</RelativeLayout>

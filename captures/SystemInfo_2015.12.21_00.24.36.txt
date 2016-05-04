@@ -1,0 +1,53 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      com.google.android.gms.appinvite.ACTION_PREVIEW:
+        41495628 com.android.coparmextab/com.google.android.gms.appinvite.PreviewActivity filter 414d3630
+      android.intent.action.MAIN:
+        4154bbb8 com.android.coparmextab/.MainActivity filter 41545168
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      com.google.android.gms.measurement.UPLOAD:
+        413b4f88 com.android.coparmextab/com.google.android.gms.measurement.AppMeasurementReceiver filter 4139b0d8
+ 
+Registered ContentProviders:
+  com.android.coparmextab/com.google.android.gms.measurement.AppMeasurementContentProvider:
+    Provider{413b4f30 com.google.android.gms.measurement.AppMeasurementContentProvider}
+ 
+ContentProvider Authorities:
+  [com.android.coparmextab.google_measurement_service]:
+    Provider{413b4f30 com.google.android.gms.measurement.AppMeasurementContentProvider}
+      applicationInfo=ApplicationInfo{41285bc0 com.android.coparmextab}
+ 
+Packages:
+  Package [com.android.coparmextab] (41395580):
+    userId=10143 gids=[1015, 1028, 3003]
+    sharedUser=null
+    pkg=Package{412895b0 com.android.coparmextab}
+    codePath=/data/app/com.android.coparmextab-1.apk
+    resourcePath=/data/app/com.android.coparmextab-1.apk
+    nativeLibraryPath=/data/app-lib/com.android.coparmextab-1
+    versionCode=1
+    applicationInfo=ApplicationInfo{41285bc0 com.android.coparmextab}
+    flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    versionName=1.0
+    dataDir=/data/data/com.android.coparmextab
+    targetSdk=21
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2015-12-20 23:49:38
+    firstInstallTime=2015-12-17 11:10:25
+    lastUpdateTime=2015-12-20 23:49:40
+    signatures=PackageSignatures{413528a8 [41349d60]}
+    permissionsFixed=true haveGids=true installStatus=1
+    pkgFlags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    User 0:  installed=true stopped=false notLaunched=false enabled=0
+    grantedPermissions:
+      android.permission.READ_PHONE_STATE
+      android.permission.READ_EXTERNAL_STORAGE
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.INTERNET
+      android.permission.ACCESS_FINE_LOCATION
+      android.permission.CALL_PHONE
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.WAKE_LOCK
+      com.google.android.c2dm.permission.RECEIVE
