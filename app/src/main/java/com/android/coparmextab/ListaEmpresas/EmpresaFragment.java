@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v7.widget.GridLayoutManager;
@@ -30,6 +31,8 @@ import com.android.utiles.Empresa;
 import com.android.utiles.JsonEmpresas;
 import com.android.utiles.JsonRateResponse;
 import com.android.utiles.OnFragmentInteractionListener;
+import com.mikepenz.fontawesome_typeface_library.FontAwesome;
+import com.mikepenz.iconics.IconicsDrawable;
 
 import java.net.UnknownHostException;
 import java.util.ArrayList;
@@ -129,21 +132,38 @@ public class EmpresaFragment extends Fragment implements MyEmpresaRecyclerViewAd
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            //cuando es vista de favoritos.
-            if (getArguments().getParcelableArrayList(ARG_LIST) != null) {
-                lista = getArguments().getParcelableArrayList(ARG_LIST);
-                mrva = new MyEmpresaRecyclerViewAdapter(lista,this);
-                recyclerView.setAdapter(mrva);
+
+            if(getArguments()!=null){
+                //cuando es vista de favoritos.
+                if (getArguments().getParcelableArrayList(ARG_LIST) != null) {
+                    lista = getArguments().getParcelableArrayList(ARG_LIST);
+                    mrva = new MyEmpresaRecyclerViewAdapter(lista, this);
+                    recyclerView.setAdapter(mrva);
+
+                }
+                //cuando la vista es llamada desde el servidor.
+                else {
+                    retrofitjsoncall();
+                    //retrofitTestjsoncall();
+                    mrva = new MyEmpresaRecyclerViewAdapter(new ArrayList<Empresa>(), this);
+                    recyclerView.setAdapter(mrva);
+                }
 
             }
-            //cuando la vista es llamada desde el servidor.
+
             else {
-                retrofitjsoncall();
-                //retrofitTestjsoncall();
                 mrva = new MyEmpresaRecyclerViewAdapter(new ArrayList<Empresa>(),this);
                 recyclerView.setAdapter(mrva);
             }
         return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        if(getArguments()==null){
+            setVisibleInterfaceList();
+        }
     }
 
     @Override
@@ -175,7 +195,11 @@ public class EmpresaFragment extends Fragment implements MyEmpresaRecyclerViewAd
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.lista_empresas, menu);
+        inflater.inflate(R.menu.fragment_empresas_menu, menu);
+        MenuItem filtro = menu.findItem(R.id.empresa_filtro);
+        MenuItem favs = menu.findItem(R.id.favlist);
+        filtro.setIcon(new IconicsDrawable(getActivity()).icon(FontAwesome.Icon.faw_filter).actionBar().color(Color.WHITE));
+        favs.setIcon(new IconicsDrawable(getActivity()).icon(FontAwesome.Icon.faw_star).actionBar().color(Color.WHITE));
     }
 
     @Override

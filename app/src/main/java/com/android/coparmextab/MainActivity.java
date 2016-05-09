@@ -27,6 +27,7 @@ import com.android.utiles.OnFragmentInteractionListener;
 import com.mikepenz.iconics.context.IconicsContextWrapper;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
@@ -48,9 +49,6 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
     private String[] actividades;
     private long backPressedTimer=0;
     private Fragment botFragment = getFragmentManager().findFragmentById(R.id.bottom_fragment);
-    @BindView(R.id.radio0)  RadioButton RadioOfertas;
-    @BindView(R.id.radio1)  RadioButton RadioEmpresas;
-    @BindView(R.id.radio2)  RadioButton RadioProduct;
     //</editor-fold>
 
     @Override
@@ -61,7 +59,6 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
         }
         actividades = getResources().getStringArray(R.array.actividades);
         setContentView(R.layout.activity_main);
-
         mNavigationDrawerFragment = (NavigationDrawerFragment) getFragmentManager()
                 .findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
@@ -69,33 +66,13 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
         mNavigationDrawerFragment.setUp(R.id.navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.add(R.id.bottom_fragment, new MainScreenBotFragment());
-        ft.add(R.id.top_fragment, new MainScreenTopFragment());
+        ft.add(R.id.top_fragment, MainScreenTopFragment.getInstance(this));
         ft.commit();
-
+        ButterKnife.bind(this);
     }
 
 
-    @OnClick(R.id.radio0) public void CambioFragmentoOferta(){
-        if(RadioEmpresas.isChecked()){
-            getFragmentManager().beginTransaction()
-                .replace(R.id.bottom_fragment,new OfertaFragment())
-                .commit();
-        }
-    }
 
-    @OnClick(R.id.radio1) public void CambioFragmentoEmpresa(){
-        if(RadioEmpresas.isChecked())
-        getFragmentManager().beginTransaction()
-                .replace(R.id.bottom_fragment,new EmpresaFragment())
-                .commit();
-    }
-
-    @OnClick(R.id.radio2) public void CambioFragmentoProductos(){
-        if(RadioEmpresas.isChecked())
-            getFragmentManager().beginTransaction()
-            .replace(R.id.bottom_fragment,new EmpresaFragment())
-            .commit();
-    }
 
 
     @Override
@@ -136,16 +113,18 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
             case 5:
                 fragmentManager.beginTransaction().replace(R.id.container,new AcercaDeFragment()).commit();
                 mTitle = actividades[position];
+                invalidateOptionsMenu();
                 break;
 
             case 6:
                 fragmentManager.beginTransaction().replace(R.id.container, new ContactoFragment()).commit();
                 mTitle = actividades[position];
-
+                invalidateOptionsMenu();
                 break;
 
             default:
                 mTitle = actividades[position];
+                invalidateOptionsMenu();
                 break;
         }
     }
@@ -200,9 +179,15 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
     }
 
     @Override
+    public void onFragmentInteraction(Fragment fragment) {
+        getFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
+        mTitle = actividades[4];
+    }
+
+    @Override
     public void onFragmentInteraction(Fragment fragment, String title) {
-        getFragmentManager().beginTransaction().replace(R.id.bottom_fragment, fragment,"BotFragment").commit();
-        mTitle = title;
+            getFragmentManager().beginTransaction().replace(R.id.bottom_fragment, fragment, "BotFragment").commit();
+            mTitle = title;
     }
 
     @Override
@@ -265,8 +250,6 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
         public void onAttach(Activity activity) {
             super.onAttach(activity);
             ((MainActivity) activity).onSectionAttached(getArguments().getInt(ARG_SECTION_NUMBER));
-
-
         }
     }
 
@@ -283,47 +266,9 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
         super.attachBaseContext(IconicsContextWrapper.wrap(newBase));
     }
 
-    /**
-     * Cambiar por el fragment de registro en la pantalla principal mediante el botón de registro
-     * de la parte inferior de la pantalla.
-     *
-     * @param v utilizado por el OnClick Listener.
-     */
 
-    @OnClick(R.id.button1) public void runRegistro() {
-        getFragmentManager().beginTransaction().replace(R.id.container, new RegistroFragment()).commit();
-        mTitle = actividades[4];
-    }
 
-    /**
-     * Cambia el fragment de la parte inferior {@link MainScreenBotFragment} basandose en el
-     * la búsqueda introducida en el campo de texto: {@link com.android.coparmextab.R.id#textoBusqueda}
-     *
-     *
-     */
-    @OnClick(R.id.botonBuscar) public void cambioVista() {
-        if (RadioOfertas.isChecked()) {
-            // llamado a query de oferta
-            Toast.makeText(this, "Ofertas", Toast.LENGTH_SHORT).show();// TODO: Borrar este toast de prueba cuando se implemente el comportamiento de este caso de uso.
-            getFragmentManager().beginTransaction().replace(R.id.bottom_fragment, OfertaFragment.newInstance(1),"BotFragment").commit();
-            mTitle="Ofertas";
-        }
 
-        if (RadioEmpresas.isChecked()) {
-            // llamado a query de empresas
-            TextView tv = (TextView) findViewById(R.id.textoBusqueda);
-            Toast.makeText(this, "Empresas", Toast.LENGTH_SHORT).show();
 
-            getFragmentManager().beginTransaction().replace(R.id.bottom_fragment, EmpresaFragment.newInstance(1, tv.getText().toString(),this),"BotFragment").commit();
-            mTitle="Empresas";
-        }
-
-        if (RadioProduct.isChecked()) {
-            // llamado a query de productos o servicios
-            Toast.makeText(this, "Productos", Toast.LENGTH_SHORT).show();// TODO-ME Borrar este toast de prueba cuano se implemente el comportamiento de este caso de uso.
-            // getFragmentManager().beginTransaction().replace(R.id.bottom_fragment, ListaEmpresasFragment.newInstance()).commit();
-            mTitle="Productos-Servicios";
-        }
-    }
 
 }

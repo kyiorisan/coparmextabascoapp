@@ -41,8 +41,7 @@
                 android:background="@drawable/selector"
                 android:textColor="#ffffff"
                 android:textSize="15dp"
-                android:clickable="false"
-                android:onClick="cambioVista" />
+                android:clickable="false" />
 
         </LinearLayout>
 

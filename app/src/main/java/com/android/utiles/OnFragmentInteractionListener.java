@@ -11,6 +11,8 @@ public interface OnFragmentInteractionListener {
 
    void onFragmentInteraction(Fragment fragment, String title);
 
+   void onFragmentInteraction(Fragment fragment);
+
    void onFragmentInteraction(Oferta oferta);
 
    void onFragmentInteraction(Empresa empresa);

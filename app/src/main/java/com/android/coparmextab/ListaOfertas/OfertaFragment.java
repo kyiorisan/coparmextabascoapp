@@ -2,11 +2,15 @@ package com.android.coparmextab.ListaOfertas;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -18,6 +22,8 @@ import com.android.utiles.JsonEmpresas;
 import com.android.utiles.JsonOfertas;
 import com.android.utiles.Oferta;
 import com.android.utiles.Vigencia;
+import com.mikepenz.fontawesome_typeface_library.FontAwesome;
+import com.mikepenz.iconics.IconicsDrawable;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -73,6 +79,7 @@ public class OfertaFragment extends Fragment {
         if (getArguments() != null) {
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
         }
+        setHasOptionsMenu(true);
     }
 
     @Override
@@ -94,6 +101,12 @@ public class OfertaFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.fragment_ofertas_menu,menu);
+        MenuItem filtro = menu.findItem(R.id.oferta_filtro);
+        filtro.setIcon(new IconicsDrawable(getActivity()).icon(FontAwesome.Icon.faw_filter).actionBar().color(Color.WHITE));
+    }
 
     @Override
     public void onAttach(Context context) {

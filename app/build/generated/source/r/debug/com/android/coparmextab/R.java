@@ -2653,13 +2653,13 @@ containing a value of this type.
         public static final int action_bar_title=0x7f0d0058;
         public static final int action_context_bar=0x7f0d0079;
         public static final int action_divider=0x7f0d00ef;
-        public static final int action_example=0x7f0d0112;
+        public static final int action_example=0x7f0d0114;
         public static final int action_menu_divider=0x7f0d0002;
         public static final int action_menu_presenter=0x7f0d0003;
         public static final int action_mode_bar=0x7f0d0075;
         public static final int action_mode_bar_stub=0x7f0d0074;
         public static final int action_mode_close_button=0x7f0d005a;
-        public static final int action_settings=0x7f0d010e;
+        public static final int action_settings=0x7f0d0111;
         public static final int activity_chooser_view_content=0x7f0d005b;
         public static final int add_user_button=0x7f0d00d2;
         public static final int adjust_height=0x7f0d0021;
@@ -2683,8 +2683,8 @@ containing a value of this type.
         public static final int bounce=0x7f0d0051;
         public static final int browse=0x7f0d00a7;
         public static final int browse10=0x7f0d00b1;
-        public static final int button1=0x7f0d00dc;
         public static final int buttonPanel=0x7f0d0062;
+        public static final int buttonRegistro=0x7f0d00dc;
         public static final int buttons=0x7f0d00e8;
         public static final int buyButton=0x7f0d0037;
         public static final int buy_now=0x7f0d003b;
@@ -2725,6 +2725,7 @@ containing a value of this type.
         public static final int email=0x7f0d0090;
         public static final int emp_iv_bot=0x7f0d00ab;
         public static final int emp_iv_top=0x7f0d00a9;
+        public static final int empresa_filtro=0x7f0d010e;
         public static final int empresarecyclerview=0x7f0d00bf;
         public static final int end=0x7f0d001f;
         public static final int end_padder=0x7f0d00f7;
@@ -2734,10 +2735,9 @@ containing a value of this type.
         public static final int expanded_menu=0x7f0d006f;
         public static final int fastOutLinearIn=0x7f0d0053;
         public static final int fastOutSlowIn=0x7f0d0054;
-        public static final int favlist=0x7f0d0110;
-        public static final int favoritos=0x7f0d010f;
+        public static final int favlist=0x7f0d010f;
+        public static final int favoritos=0x7f0d0112;
         public static final int favoritoslist=0x7f0d00c0;
-        public static final int filter=0x7f0d0113;
         public static final int fpr_img_1=0x7f0d00d7;
         public static final int fpr_img_2=0x7f0d00d8;
         public static final int fpr_img_3=0x7f0d00d9;
@@ -2815,6 +2815,7 @@ containing a value of this type.
         public static final int num_bot=0x7f0d00aa;
         public static final int num_top=0x7f0d00a8;
         public static final int ofertaTexto=0x7f0d00f9;
+        public static final int oferta_filtro=0x7f0d0110;
         public static final int oferta_imagen_oferta=0x7f0d00f8;
         public static final int oferta_vigencia=0x7f0d00fb;
         public static final int overshoot=0x7f0d0057;
@@ -2840,7 +2841,7 @@ containing a value of this type.
         public static final int radio_negativo=0x7f0d0107;
         public static final int radio_positivo=0x7f0d0106;
         public static final int rate=0x7f0d010c;
-        public static final int regreso=0x7f0d0111;
+        public static final int regreso=0x7f0d0113;
         public static final int route_name=0x7f0d00df;
         public static final int sandbox=0x7f0d0034;
         public static final int satellite=0x7f0d0024;
@@ -2996,11 +2997,12 @@ containing a value of this type.
     public static final class menu {
         public static final int contextual_empresa=0x7f0e0000;
         public static final int contextual_favoritos=0x7f0e0001;
-        public static final int global=0x7f0e0002;
-        public static final int info_empresa=0x7f0e0003;
-        public static final int lista_empresas=0x7f0e0004;
-        public static final int lista_favoritos=0x7f0e0005;
-        public static final int main=0x7f0e0006;
+        public static final int fragment_empresas_menu=0x7f0e0002;
+        public static final int fragment_ofertas_menu=0x7f0e0003;
+        public static final int global=0x7f0e0004;
+        public static final int info_empresa=0x7f0e0005;
+        public static final int lista_favoritos=0x7f0e0006;
+        public static final int main=0x7f0e0007;
     }
     public static final class raw {
         public static final int gtm_analytics=0x7f050000;
