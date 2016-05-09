@@ -17,23 +17,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.coparmextab.R;
-import com.android.coparmextab.UserInterface.MapsActivity;
+import com.android.coparmextab.MapsActivity;
 import com.android.retrofitutils.ClienteRest;
 import com.android.utiles.Empresa;
 import com.android.utiles.JsonEmpresas;
-import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
-import java.lang.ref.WeakReference;
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Response;
-import retrofit2.http.Url;
 
 /**
  * {@link RecyclerView.Adapter} que puede mostrar {@link Empresa} hace una llamada al

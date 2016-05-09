@@ -17,7 +17,7 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:weightSum="1"
-        tools:context=".UserInterface.InfoEmpresaActivity"
+        tools:context=".InfoEmpresaActivity"
         android:background="@color/card_background">
 
         <ImageView
@@ -335,7 +335,7 @@
                                 android:text="b\n" />
                         </LinearLayout>
                         <fragment
-                            class="com.android.coparmextab.UserInterface.ScrollViewCompatibleMapFragment"
+                            class="com.android.coparmextab.ScrollViewCompatibleMapFragment"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:id="@+id/mapita"/>

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
 
-    tools:context=".UserInterface.MainActivity$PlaceholderFragment" >
+    tools:context=".MainActivity$PlaceholderFragment" >
 
 
     <FrameLayout

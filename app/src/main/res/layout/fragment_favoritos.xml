@@ -8,6 +8,6 @@
     android:layout_height="match_parent"
     android:id="@+id/favoritoslist"
     android:name="com.android.coparmextab.UserInterface.FavoritosFragment"
-    tools:context="com.android.coparmextab.UserInterface.FavoritosFragment"
+    tools:context=".FavoritosFragment"
     app:layoutManager="LinearLayoutManager"
  />

@@ -49,8 +49,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/selector"
         android:text="Registrate"
-        android:textColor="@android:color/white"
-        android:onClick="runRegistro" />
+        android:textColor="@android:color/white"/>
 
 </LinearLayout>
 

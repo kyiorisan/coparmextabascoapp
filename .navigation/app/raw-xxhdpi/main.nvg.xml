@@ -6,7 +6,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "com.android.coparmextab.UserInterface.MainActivity"/>
+        className = "com.android.coparmextab.MainActivity"/>
       <point      
         x = "500"      
         y = "100"/>
@@ -14,7 +14,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.MenuState"      
-        className = "com.android.coparmextab.UserInterface.MainActivity"/>
+        className = "com.android.coparmextab.MainActivity"/>
       <point      
         x = "2080"      
         y = "100"/>

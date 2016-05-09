@@ -1,6 +1,5 @@
 package com.android.coparmextab.ListaEmpresas;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.app.Fragment;
 import android.content.Context;
@@ -22,14 +21,12 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.android.coparmextab.UserInterface.FavoritosFragment;
-import com.android.coparmextab.UserInterface.InfoEmpresaActivity;
+import com.android.coparmextab.FavoritosFragment;
+import com.android.coparmextab.InfoEmpresaActivity;
 import com.android.coparmextab.R;
 import com.android.retrofitutils.ClienteRest;
 import com.android.retrofitutils.ClienteRestTest;
-import com.android.utiles.DBManager;
 import com.android.utiles.Empresa;
-import com.android.utiles.ItemClickSupport;
 import com.android.utiles.JsonEmpresas;
 import com.android.utiles.JsonRateResponse;
 import com.android.utiles.OnFragmentInteractionListener;
@@ -49,7 +46,6 @@ public class EmpresaFragment extends Fragment implements MyEmpresaRecyclerViewAd
 
     //<editor-fold desc="Atributos">
     private static final String SAVED_STATE = "SavedEstate";
-    private static final String ARG_COLUMN_COUNT = "column-count";
     private static final String ARG_QUERY = "JSON-Query";
     private static final String ARG_LIST = "List";
     private static Bundle mBundleRVState;
@@ -75,10 +71,16 @@ public class EmpresaFragment extends Fragment implements MyEmpresaRecyclerViewAd
     }
 
 
+    /**
+     * Método para fabricar un fragmento de empresas
+     *
+     * @param query El texto de la consulta hecha en la actividad principal
+     * @param listener Listener usado para cabiar el fragmento y el título del ActionBar.
+     * @return el fragmento instanciado.
+     */
     public static EmpresaFragment newInstance(int columnCount, String query, OnFragmentInteractionListener listener) {
         EmpresaFragment fragment = new EmpresaFragment();
         Bundle args = new Bundle();
-        args.putInt(ARG_COLUMN_COUNT, columnCount);
         args.putString(ARG_QUERY, query);
         fragment.setArguments(args);
         fragment.setMlistener(listener);
@@ -87,10 +89,15 @@ public class EmpresaFragment extends Fragment implements MyEmpresaRecyclerViewAd
     }
 
 
-    public static EmpresaFragment newInstance(int columnCount, ArrayList<Empresa> lista, OnFragmentInteractionListener listener) {
+    /**
+     *
+     * @param lista
+     * @param listener
+     * @return
+     */
+    public static EmpresaFragment newInstance(ArrayList<Empresa> lista, OnFragmentInteractionListener listener) {
         EmpresaFragment fragment = new EmpresaFragment();
         Bundle args = new Bundle();
-        args.putInt(ARG_COLUMN_COUNT, columnCount);
         args.putParcelableArrayList(ARG_LIST, lista);
         fragment.setArguments(args);
         fragment.setMlistener(listener);
@@ -104,9 +111,6 @@ public class EmpresaFragment extends Fragment implements MyEmpresaRecyclerViewAd
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
-        }
         setHasOptionsMenu(true);
     }
 
